@@ -70,6 +70,7 @@ fun MainScreen() {
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(top = 16.dp)
+                            .testTag("greetingMsg")
                     )
                 }
             }
@@ -85,17 +86,16 @@ fun UserInput(name: String, onNameChange: (String) -> Unit, modifier: Modifier =
         label = { Text("Enter your Name") },
         modifier = modifier
             .fillMaxWidth()
-            .testTag("UserInput")
+            .testTag("nameInput")
     )
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name! Welcome to INF2007!",
+        text = "Hello $name!, Welcome to INF2007!",
         modifier = modifier
             .fillMaxWidth()
-            .testTag("greeting")
     )
 }
 
